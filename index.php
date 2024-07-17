@@ -1,11 +1,11 @@
 <?php
-ini_set("auto_detect_line_endings"), true); // Fine linea MAC
+ini_set("auto_detect_line_endings", true); // Fine linea MAC
 
 require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
 /**
- * @var file con dati comuni a tutte le pagine
+ * @var string file con dati comuni a tutte le pagine
  * 
 */
 $staticDataFile = 'data/static.json';
@@ -17,7 +17,7 @@ $staticDataFile = 'data/static.json';
 $staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
 
 /**
- * @var file con dati homepage
+ * @var string file con dati homepage
  * 
 */
 $homepageDataFile = 'data/homepage.json';
@@ -66,17 +66,15 @@ $css = array('scss/css/style.min', 'scss/css/homepage.min');
 			$servStr = '';
 			// Stampa una card per ogni servizio presente in homepage.json
 			foreach ($homepageDataArray['cards'] as $card) {
-				?>
-				<div class="card">
-					<div class="title">
-						<h1><?php echo $card->text; ?></h1>
-					</div>
-					<div class="image">
-						<img src="<?php echo $card->image; ?>" alt="<?php echo $card->name; ?>" title="<?php echo $card->text ?>">
-					</div>
-				</div>
-			<?php
+				// Apro DIV CARD
+				$servStr .= '<div class="card">';
+				// Stampa IMMAGINE e TESTO
+				$servStr .= sprintf('<div class="title"><h1>%s</h1></div>', $card->text);
+				$servStr .= sprintf('<div class="image"><img src="%s" alt="%s" title="%s"></div>', $card->image, $card->name, $card->text);
+				// Chiudo DIV CARD
+				$servStr .= '</div>';
 			}
+			echo $servStr;
 			?>
 
 			<div class="serv-row">

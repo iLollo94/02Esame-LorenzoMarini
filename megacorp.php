@@ -1,11 +1,11 @@
 <?php
-ini_set("auto_detect_line_endings"), true); // Fine linea MAC
+ini_set("auto_detect_line_endings", true); // Fine linea MAC
 
 require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
 /**
- * @var file con dati comuni a tutte le pagine
+ * @var string file con dati comuni a tutte le pagine
  * 
 */
 $staticDataFile = 'data/static.json';
@@ -17,7 +17,7 @@ $staticDataFile = 'data/static.json';
 $staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
 
 /**
- * @var file con dati pagina progetto Megacorp
+ * @var string file con dati pagina progetto Megacorp
  * 
 */
 $megacorpDataFile = 'data/megacorp.json';

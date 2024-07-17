@@ -1877,3 +1877,7 @@
 127.0.0.1 - - [17/Jul/2024:07:02:56 +0200] "GET /portfolio.php HTTP/1.1" 200 4592
 127.0.0.1 - - [17/Jul/2024:07:02:56 +0200] "GET /megacorp.php HTTP/1.1" 200 7136
 127.0.0.1 - - [17/Jul/2024:07:03:02 +0200] "GET /portfolio.php HTTP/1.1" 200 4592
+127.0.0.1 - - [17/Jul/2024:19:03:50 +0200] "GET /img/LMWebDev.png HTTP/1.1" 304 -
+127.0.0.1 - - [17/Jul/2024:19:03:50 +0200] "GET /scss/css/portfolio.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Jul/2024:19:03:50 +0200] "GET /scss/css/style.min.css HTTP/1.1" 304 -
+127.0.0.1 - - [17/Jul/2024:19:03:50 +0200] "GET /scss/img/sfondo.jpg HTTP/1.1" 404 300
