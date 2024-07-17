@@ -1,0 +1,79 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "name": "front-end",
+            "front": [
+                {
+                    "text": "Sviluppo Front-end",
+                    "image": "img/front-end.jpg",
+                    "imagealt": "front-end"
+                }
+            ],
+            "back": [
+                {
+                    "line1": "Sviluppo siti web dinamici",
+                    "line2": "Web design",
+                    "line3": "UX/UI design",
+                    "line4": "Sviluppo web app con framework Angular",
+                    "line5": "<strong>HTML - CSS - PHP<\/strong>"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "back-end",
+            "front": [
+                {
+                    "text": "Sviluppo Back-end",
+                    "image": "img/back-end.jpg",
+                    "imagealt": "back-end"
+                }
+            ],
+            "back": [
+                {
+                    "line1": "Sviluppo funzionalità lato server",
+                    "line2": "Costruzione database basati su MySQL",
+                    "line3": "Sviluppo web app con framework Angular",
+                    "line4": "<strong>PHP<\/strong>"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "consulenza",
+            "front": [
+                {
+                    "text": "Consulenza",
+                    "image": "img/consulenza.jpg",
+                    "imagealt": "consulenza"
+                }
+            ],
+            "back": [
+                {
+                    "line1": "Consulenza informatica",
+                    "line2": "Consulenza per lo sviliuppo di applicazioni web",
+                    "line3": "Consulenza sviluppo server"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "assemblaggio",
+            "front": [
+                {
+                    "text": "Assemblaggio Hardware",
+                    "image": "img/assemblaggio.jpg",
+                    "imagealt": "assemblaggio"
+                }
+            ],
+            "back": [
+                {
+                    "line1": "Assemblaggio e manutenzione PC desktop custom per ogni range di utilizzo",
+                    "line2": "Pulizia, manutenzione e installazione software di base",
+                    "line3": "Risoluzione problemi hardware e software"
+                }
+            ]
+        }
+    ]
+}

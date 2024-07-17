@@ -1,0 +1,298 @@
+@import "variables";
+
+// Posizionamento generale (per bloccare footer al bottom)
+html {
+    height: 100%;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+// Font headings
+@for $i from 1 through 6 {
+    h#{$i} {
+        @extend %titoli ;
+    }
+
+    @if $i == 1 {
+        h#{$i} {
+            font-weight: 900;
+        }
+    }
+    @else if $i <= 4 {
+        h#{$i} {
+            font-weight: 700;
+        }
+    }
+}
+
+// Font text
+p,
+a,
+label {
+    @extend %testi ;
+}
+
+//Background
+body {
+    @extend %background;
+    
+    // Per bloccare footer al bottom
+    height: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+// Header e nav
+div.flex-header {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: row;
+
+    div.logo {
+        width: 150px;
+
+        // Media-query
+        @media all and (max-width:440px) {
+            width: 100px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    div.title {
+        flex-grow: 1;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // Media-query
+        @media all and (max-width:440px) {
+            align-items: flex-start;
+        }
+
+        h1 {
+            font-size: 3em;
+            letter-spacing: 10px;
+
+            // Media-query
+            @media all and (max-width:800px) {
+                font-size: 2em;
+                letter-spacing: 0;
+            }
+
+            @media all and (max-width:440px) {
+                font-size: 1.2em;
+                letter-spacing: 0;
+            }
+        }
+
+        h2 {
+            font-size: 2.4em;
+
+            // Media-query
+            @media all and (max-width:800px) {
+                font-size: 1.6em;
+            }
+
+            @media all and (max-width:440px) {
+                font-size: 1em;
+            }
+        }
+    }
+
+    nav {
+        width: 150px;
+
+        // Media-query
+        @media all and (max-width:440px) {
+            width: 100px;
+        }
+
+        div.hamburger-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            display: flex;
+            flex-direction: column;
+
+            input#controllo {
+                opacity: 0;
+            }
+
+            // Hamburger icon
+            .label-controllo {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                cursor: pointer;
+                z-index: 2;
+                padding: 10px;
+                background-color: $coloreTerziario;
+                border-radius: 50%;
+
+                // Hamburger icon
+                &>span,
+                &>span::after,
+                &>span::before {
+                    position: absolute;
+                    top: 25px;
+                    width: 30px;
+                    height: 3px;
+                    background-color: $colorePrimario;
+                    border-radius: 2px;
+                    transition: 0.25s ease-in-out;
+                }
+
+                &>span::before {
+                    content: "";
+                    top: -10px;
+                }
+
+                &>span::after {
+                    content: "";
+                    top: 10px;
+                }
+            }
+
+            // Hidden menu
+            ul.menu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                position: fixed;
+                right: -250px;
+                width: 200px;
+                padding: 100px 0;
+                height: 100%;
+                background-color: antiquewhite;
+                box-shadow: -5px -5px 30px $coloreShadow;
+                z-index: 1;
+                transition: 0.25s ease-in-out;
+
+                li {
+                    width: 100%;
+                    display: block;
+                    text-align: right;
+                    margin-right: 20px;
+                    margin-bottom: 20px;
+
+                    a {
+                        display: inline-block;
+                        width: 100%;
+                        padding: 10px;
+                        font-size: 20px;
+                    }
+
+                    &:hover a {
+                        background-color: $coloreTerziario;
+                    }
+                }
+            }
+
+            // Hamburger toggle transition
+            input#controllo:checked {
+                &~ ul.menu {
+                    right: 0;
+                }
+
+                &~ .label-controllo {
+                    &>span {
+                        transform: rotate(45deg);
+
+                        &::before {
+                            top: 0;
+                            transform: rotate(0deg);
+                        }
+
+                        &::after {
+                            top: 0;
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Main (per mantenere il footer allineato al bottom)
+main {
+    flex: 1 0;
+}
+
+// Footer
+footer {
+    flex-shrink: 0;
+    padding-top: 10px;
+    @extend %footer;
+
+    // FLEXBOX PRIMA RIGA
+    div.footer-row {
+        display: flex;
+        flex-direction: row;
+
+        @media all and (max-width:800px) {
+            flex-direction: column;
+        }
+
+        div.footer-col {
+            flex: calc(100% / 3);
+            text-align: center;
+            margin-bottom: 20px;
+
+            @media all and (max-width:800px) {
+                width: 100%;
+            }
+
+            h4 {
+                margin-bottom: 10px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    }
+
+    // FLEXBOX SECONDA RIGA
+    div.footer-privacy ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        li {
+            display: block;
+            margin: 20px;
+        }
+    }
+
+    // COPYRIGHT TEXT
+    div.footer-copy p {
+        font-size: 0.8rem;
+        font-weight: normal;
+        font-style: italic;
+        text-align: right;
+        margin: 5px;
+    }
+
+    a:hover {
+        color: $colorePrimario;
+    }
+}

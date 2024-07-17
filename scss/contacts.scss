@@ -1,0 +1,130 @@
+@import 'variables';
+
+main {
+    @extend %pageWidth;
+
+    div.container {
+        display: flex;
+        margin-bottom: 50px;
+
+        @media all and (max-width:800px) {
+            flex-direction: column-reverse;
+        }
+
+        div.box {
+            flex: 50%;
+            padding: 10px;
+
+            h3 {
+                margin: 10px;
+                text-transform: uppercase;
+            }
+
+            // BOX CONTATTI
+            &.contact-box {
+                text-align: center;
+
+                ul {
+                    list-style-type: none;
+                    padding: 0;
+                    margin-bottom: 20px;
+                }
+
+                div.map {
+                    margin: 30px auto;
+                }
+
+                a:hover {
+                    color: $coloreTitoli;
+                }
+            }
+
+            // BOX FORM
+            &.form {
+                padding: 10px 50px;
+
+                @media all and (max-width:440px) {
+                    padding: 10px;
+                }
+
+                form {
+                    fieldset {
+                        border: none;
+                        outline: none;
+
+                        a {
+                            text-decoration: underline;
+
+                            &:hover {
+                                color: $coloreTerziario;
+                            }
+                        }
+
+                        legend {
+                            text-align: right;
+                        }
+
+                        label::after {
+                            content: '*';
+                            margin: 0 5px;
+                            color: red;
+                        }
+
+                        // STILE INPUT
+                        input[type='text'],
+                        input[type='email'],
+                        input[type='tel'],
+                        textarea,
+                        select {
+                            width: 100%;
+                            padding-left: 5px;
+                            margin: 5px 0 20px 0;
+                            background-color: $coloreTerziario;
+                            border: none;
+                            outline: none;
+                            border-bottom: 3px solid $coloreBordi;
+
+                            &:hover {
+                                background-color: $coloreSecondario;
+                            }
+                        }
+
+                        input[type='text'],
+                        input[type='email'],
+                        input[type='tel'],
+                        select {
+                            height: 40px;
+                            line-height: 40px;
+                        }
+
+                        input[type='checkbox'] {
+                            margin: 0 5px 20px 5px;
+                        }
+
+                        textarea {
+                            resize: none;
+                            height: 150px;
+                        }
+
+                        // BUTTONS
+                        div.buttons {
+                            display: flex;
+                            justify-content: center;
+
+                            input {
+                                margin: 20px;
+                                cursor: pointer;
+                                @extend %buttons;
+                            }
+                        }
+                    }
+                }
+
+                p.error {
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

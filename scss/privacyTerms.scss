@@ -1,0 +1,47 @@
+@import 'variables';
+
+main {
+    @extend %pageWidth;
+
+    .terms-container {
+        width: 80%;
+        margin: 50px auto;
+        padding: 40px;
+        border: 2px solid $coloreBordi;
+        box-shadow: 5px 5px 20px  $coloreShadow;
+        border-radius: 50px;
+
+        @media all and (max-width:440px) {
+            width: 100%;
+            border: none;
+            padding: 10px;
+            box-shadow: none;
+        }
+
+        h1,
+        h2 {
+            margin: 20px 0 10px 10px;
+        }
+
+        p {
+            text-align: justify;
+
+        }
+        
+        p.edit-date {
+            text-align: right;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+
+        &>ol {
+            list-style: lower-alpha outside;
+            padding: 0;
+
+            @media all and (max-width:440px) {
+                list-style-position: inside;
+            }
+        }
+    }
+}

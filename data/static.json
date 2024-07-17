@@ -1,0 +1,74 @@
+{
+    "header": [
+        {
+            "logo": "img/LOGO_CIRCLE_PICCOLO.png",
+            "title": "Lorenzo Marini",
+            "subtitle": "Web Developer"
+        }
+    ],
+    "nav": [
+        {
+            "id": 1,
+            "title": "Home",
+            "name": "Home",
+            "url": "index.php"
+        },
+        {
+            "id": 2,
+            "title": "Portfolio",
+            "name": "Portfolio",
+            "url": "portfolio.php"
+        },
+        {
+            "id": 3,
+            "title": "Servizi",
+            "name": "Servizi",
+            "url": "services.php"
+        },
+        {
+            "id": 4,
+            "title": "Contatti",
+            "name": "Contatti",
+            "url": "contacts.php"
+        }
+    ],
+    "footer": {
+        "colonne": [
+            {
+                "id": 1,
+                "name": "colonna1",
+                "class": "footer-col",
+                "title": "Vieni a trovarmi:",
+                "content": "<address><p>Via Nome Cognome 7,<br>48124 Ravenna RA,<br>Italia<\/p><\/address>"
+            },
+            {
+                "id": 2,
+                "name": "colonna2",
+                "class": "footer-col",
+                "title": "Contattami:",
+                "content": "<address><ul><li><a href=\"mailto:info@lmwebdev.io\" title=\"mail\">info@lmwebdev.io<\/a><\/li><li><a href=\"#\" title=\"telefono\">+39 338xxxxxxx<\/a><\/li><\/ul><\/address>"
+            },
+            {
+                "id": 3,
+                "name": "colonna3",
+                "class": "footer-col",
+                "title": "Seguimi su:",
+                "content": "<address><ul><li><a href=\"#\" title=\"Facebook\">Facebook<\/a><\/li><li><a href=\"#\" title=\"Linkedin\">Linkedin<\/a><\/li><li><a href=\"#\" title=\"Instragram\">Instragram<\/a><\/li><\/ul><\/address>"
+            }
+        ],
+        "righe": [
+            {
+                "id": 1,
+                "name": "privacy",
+                "class": "footer-privacy",
+                "content": "<ul><li><a href=\"privacy.php\" title=\"Privacy\">Privacy<\/a><\/li><li><a href=\"terms.php\" title=\"ToC\">Terms and Conditions<\/a><\/li><\/ul>"
+            },
+            {
+                "id": 2,
+                "name": "copyright",
+                "class": "footer-copy",
+                "content": "<p>Created by Lorenzo Marini. All rights reserved &copy; 2024<\/p>"
+            }
+        ]
+    }
+}

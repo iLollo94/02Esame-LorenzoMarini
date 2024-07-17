@@ -1,0 +1,224 @@
+@import "variables";
+
+main {
+    @extend %pageWidth;
+
+    // FLEXBOX SERVIZI
+    div.serv-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin: auto;
+
+        @media all and (max-width:800px) {
+            width: 100%;
+        }
+
+        div.card {
+            width: 500px;
+            height: 200px;
+            margin: 10px;
+            padding: 10px;
+            @extend %cardStyle;
+
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-around;
+
+            @media all and (max-width:800px) {
+                align-self: center;
+            }
+
+            @media all and (max-width:440px) {
+                width: 350px;
+                height: calc((350 * 200) / 500 * 1px);
+                padding: 5px;
+                margin: 5px;
+            }
+
+            &:nth-of-type(even) {
+                align-self: flex-end;
+
+                @media all and (max-width:800px) {
+                    align-self: center;
+                }
+            }
+
+            div.title,
+            div.image {
+                width: 40%;
+                height: calc(100% - 40px);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                @media all and (max-width:440px) {
+                    height: calc(100% - 20px);
+                }
+            }
+
+            div.title {
+                align-content: center;
+                text-align: center;
+
+                @media all and (max-width:440px) {
+                    font-size: 0.8em;
+                }
+            }
+
+            div.image {
+                border-radius: 40px;
+                overflow: hidden;
+
+                img {
+                    display: block;
+                    width: 100%;
+                    object-fit: cover;
+                    filter: blur(1px);
+                }
+            }
+        }
+
+        div.serv-row {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            
+            a {
+                @extend %buttons;
+                display: block;
+            }
+        }
+    }
+
+    // FLEXBOX CLIENTI
+    div.clients-container {
+        width: 80%;
+        margin: 50px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        @media all and (max-width:800px) {
+            width: 90%;
+        }
+
+        div.client-logo {
+            // In caso non sia presente LOGO CLIENTE
+            div.client-placeholder {
+                width: 150px;
+                height: 150px;
+                border: 1px solid $coloreBordi;
+                border-radius: 50%;
+                background-color: $coloreSecondario;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-content: center;
+
+                @media all and (max-width:800px) {
+                    width: 100px;
+                    height: 100px;
+                }
+
+                h1 {
+                    text-align: center;
+                    font-size: 1em;
+                }
+            }
+
+            // In caso sia presente LOGO CLIENTE
+            img {
+                width: 100px;
+            }
+        }
+    }
+
+    // BOX BIOGRAFIA
+    div.bio-container {
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid $coloreBordi;
+        box-shadow: 5px 5px 20px  $coloreShadow;
+        border-radius: 90px;
+
+        div.title {
+            margin: 10px 30px;
+            text-transform: uppercase;
+        }
+
+        div.bio {
+            padding: 10px;
+
+            p {
+                font-size: 1.2rem;
+                margin: 10px;
+                font-style: italic;
+                text-align: justify;
+            }
+        }
+
+        div.self {
+            float: right;
+            margin: 20px;
+            width: 200px;
+            border-radius: 50px;
+            opacity: 70%;
+            box-shadow: 5px 5px 20px  $coloreShadow;
+            overflow: hidden;
+
+            @media all and (max-width:800px) {
+                float: none;
+                text-align: center;
+                width: 150px;
+                margin: 20px auto;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        // Clearfix
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+
+    // CONTAINER LINGUAGGI CONOSCIUTI
+    div.lang-container {
+        width: 80%;
+        margin: 40px auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+
+        // Media-query
+        @media all and (max-width:800px) {
+            width: 100%;
+        }
+
+        div.flex-lang {
+            margin-top: 10px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 20px;
+
+            div.lang-logo {
+                width: 64px;
+
+                img {
+                    width: 100%;
+                    filter: drop-shadow(5px 5px 10px $coloreShadow);
+                }
+            }
+        }
+    }
+}

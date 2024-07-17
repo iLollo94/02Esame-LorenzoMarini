@@ -1,0 +1,72 @@
+//COLORI
+$colorePrimario: #8a6a00;
+$coloreSecondario: #c4ae66b9;
+$coloreTerziario: #b9a87977;
+$coloreCard: #FFFFFF;
+$coloreBordi: #2b2615;
+$coloreShadow: #414141;
+
+// TITOLI
+$coloreTitoli: #705600;
+$fontTitoli: "Reddit Mono", monospace;
+
+// TESTI
+$coloreTesti: #272727;
+$fontTesti: "Roboto", sans-serif;
+
+// PSEUDOCLASSI
+
+%pageWidth {
+    width: min(100%, 1600px);
+    margin: auto;
+}
+
+%background {
+    background-image: linear-gradient(rgba(255,255,255,0.6),rgba(255,255,255,0.6)), url(/img/sfondo.jpg), url(../img/sfondo.jpg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+%testi {
+    color: $coloreTesti;
+    font-family: $fontTesti;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+%titoli {
+    color: $coloreTitoli;
+    font-family: $fontTitoli;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+%buttons {
+    padding: 10px 20px;
+    background-color: $coloreSecondario;
+    border-radius: 25px;
+    border: 1px solid $coloreBordi;
+
+    &:hover {
+        background-color: $coloreTerziario;
+    }
+}
+
+%hoverButton {
+    background-color: $coloreTerziario;
+    border: 2px solid $coloreTerziario;
+    border-radius: 25px;
+    color: $colorePrimario;
+}
+
+%cardStyle {
+    background-color: $coloreCard;
+    border: 1px solid $coloreBordi;
+    border-radius: 50px;
+    box-shadow: 5px 5px 20px $coloreShadow;
+}
+
+%footer {
+    background-color: $coloreTerziario;
+    border-top: 2px solid #808080;
+}

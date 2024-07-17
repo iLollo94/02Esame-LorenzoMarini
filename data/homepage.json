@@ -1,0 +1,93 @@
+{
+    "cards": [
+        {
+            "id": 1,
+            "name": "front-end",
+            "text": "Sviluppo Front-end",
+            "image": "img/front-end.jpg"
+        },
+        {
+            "id": 2,
+            "name": "back-end",
+            "text": "Sviluppo back-end",
+            "image": "img/back-end.jpg"
+            
+        },
+        {
+            "id": 3,
+            "name": "consulenza",
+            "text": "Consulenza",
+            "image": "img/consulenza.jpg"
+        },
+        {
+            "id": 4,
+            "name": "assemblaggio",
+            "text": "Assemblaggio sistemi",
+            "image": "img/assemblaggio.jpg"
+        }
+    ],
+    "clienti": [
+        {
+            "id": 1,
+            "name": "cliente1",
+            "image": "",
+            "title": "LOGO CLIENTE"
+        },
+        {
+            "id": 2,
+            "name": "cliente2",
+            "image": "",
+            "title": "LOGO CLIENTE"
+        },
+        {
+            "id": 3,
+            "name": "cliente3",
+            "image": "",
+            "title": "LOGO CLIENTE"
+        },
+        {
+            "id": 4,
+            "name": "cliente4",
+            "image": "",
+            "title": "LOGO CLIENTE"
+        },
+        {
+            "id": 5,
+            "name": "cliente5",
+            "image": "",
+            "title": "LOGO CLIENTE"
+        }
+    ],
+    "bio": [
+        {
+            "id": 1,
+            "title": "about me",
+            "image": "img/IO.jpg",
+            "imagealt": "Foto di Lorenzo Marini",
+            "imagetitle": "Lorenzo Marini",
+            "text": "data/bio.txt"
+        }
+    ],
+    "linguaggi": [
+            {
+                "id": 1,
+                "name": "HTML",
+                "image": "img/html.png"
+            },
+            {
+                "id": 2,
+                "name": "CSS",
+                "image": "img/css.png"
+            },
+            {
+                "id": 3,
+                "name": "SASS",
+                "image": "img/sass.png"
+            },
+            {
+                "id": 4,
+                "name": "PHP",
+                "image": "img/php.png"
+            }
+    ]
+}

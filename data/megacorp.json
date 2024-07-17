@@ -1,0 +1,110 @@
+{
+    "name": "Megacorp SPA",
+    "title": "Sviluppo sistema web per la gestione aziendale",
+    "gallery" : [
+        {
+            "id": 1,
+            "name": "image-card1",
+            "image": "img/vetrina.jpg",
+            "imagealt": "Website Preview",
+            "description": "Sito vetrina aziendale"
+        },
+        {
+            "id": 2,
+            "name": "image-card2",
+            "image": "img/appgestionale.jpg",
+            "imagealt": " Web Application Preview",
+            "description": "Web Application Gestionale"
+        },
+        {
+            "id": 3,
+            "name": "image-card3",
+            "image": "img/appgestionale.jpg",
+            "imagealt": "Web Application Preview",
+            "description": "Web Application Gestionale pt.2"
+        },
+        {
+            "id": 4,
+            "name": "image-card4",
+            "image": "img/appfinanziaria.jpg",
+            "imagealt": "Web Application Preview",
+            "description": "Web application per la gestione finanziaria"
+        },
+        {
+            "id": 5,
+            "name": "image-card5",
+            "image": "img/appfinanziaria.jpg",
+            "imagealt": "Web Application Preview",
+            "description": "Web application per la gestione finanziaria pt.2"
+        },
+        {
+            "id": 6,
+            "name": "image-card6",
+            "image": "img/server.jpg",
+            "imagealt": "Server Preview",
+            "description": "Web server"
+        }
+    ],
+    "description": {
+        "title": "Descrizione",
+        "text": "Progetto realizzato per conto di Megacorp SPA, ultimato a Milano nel Gennaio 2024, utilizzando framework Angular per lo sviluppo Front-End delle web application legate alla gestione aziendale e database MySQL per l'archiviazione dei dati dei clienti, dei dati del personale aziendale e dei dati finanziari.",
+        "url": "",
+        "sub": [
+            {
+                "id": 1,
+                "subtitle": "Sito web pubblicitario",
+                "text": "Creato come vetrina principale nella quale i clienti possono trovare tutte le informazioni sui prodotti e i servizi offerti dall'azienda. Totalmente responsive per una visualizzazione ottimale sia su dispositivi fissi che mobile. Presenta anche una sezione per le richiesti di contatto e di consulenza, oltre che la possibilità di prenotare colloqui diretti con i consulenti aziendali attraverso un'agenda aggiornata in tempo reale."
+            },
+            {
+                "id": 2,
+                "subtitle": "Web application gestionale",
+                "text": "Applicazione basata su framework Angular, con interfaccia completamente personalizzabile lato client in base al reparto in cui si opera, che sia gestione del personale, gestione degli appuntamenti o gestione delle prenotazioni ricevute attraverso il sito web pubblico."
+            },
+            {
+                "id": 3,
+                "subtitle": "Web application per la gestione finanziaria",
+                "text": "Strutturata secondo le necessità del reparto di amministrazione aziendale, permette la totale gestione dei magazzini, della fatturazione e dell'analisi finanziaria interna."
+            },
+            {
+                "id": 4,
+                "subtitle": "Web server e database",
+                "text": "Corpo centrale del sistema informatico aziendale, permette la comunicazione tra i vari sistemi di gestione, nonché l'archiviazione dei dati dei clienti e dei dati interni. Presenta anche un sistema di backup cloud automatico."
+            }
+        ]
+    },
+    "other": {
+        "title": "Altri progetti simili",
+        "sub": [
+            {
+                "id": 1,
+                "name": "Nome sito",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "Nome sito",
+                "description": "Sito web e server gestione ordini e pagamenti",
+                "type": "eCommerce",
+                "date": "1/1/24",
+                "url": ""
+            },
+            {
+                "id": 2,
+                "name": "Nome sito",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "Nome sito",
+                "description": "Applicazione web e server gestione utenza e abbonati",
+                "type": "Web application",
+                "date": "1/1/24",
+                "url": ""
+            },
+            {
+                "id": 3,
+                "name": "Nome sito",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "Nome sito",
+                "description": "Planner interattivo per la gestione del personale",
+                "type": "Web Application",
+                "date": "1/1/24",
+                "url": ""
+            }
+        ]
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "privacy": {
+        "title": "Informativa sulla privacy",
+        "text": "Questa informativa sulla privacy spiega come raccogliamo, utilizziamo e proteggiamo le informazioni personali che potremmo raccogliere tramite il nostro sito web Lorenzo Marini Web Developer. Il termine \"informazioni personali\" si riferisce a dati che possono essere utilizzati per identificare un individuo, inclusi ma non limitati a nome, indirizzo email, indirizzo postale o altre informazioni di contatto.",
+        "sub": [
+            {
+                "subtitle": "Raccolta delle Informazioni",
+                "text": "Raccogliamo informazioni personali solo quando ci vengono fornite volontariamente dagli utenti del sito, ad esempio quando si iscrivono alla nostra newsletter, compilano un modulo di contatto o effettuano un acquisto. Le informazioni raccolte possono includere nome, indirizzo email, indirizzo postale e altre informazioni necessarie per fornire i nostri servizi."
+            },
+            {
+                "subtitle": "Utilizzo delle Informazioni",
+                "text": "Utilizziamo le informazioni personali raccolte per fornire i servizi richiesti dagli utenti, per migliorare la user experience sul nostro sito web e per comunicare con gli utenti tramite newsletter o altre forme di comunicazione. Non condivideremo mai le informazioni personali degli utenti con terze parti senza il loro consenso, tranne nei casi in cui sia richiesto dalla legge."
+            },
+            {
+                "subtitle": "Protezione delle Informazioni",
+                "text": "Ci impegniamo a proteggere le informazioni personali degli utenti e ad adottare misure di sicurezza adeguate per prevenire l'accesso non autorizzato, la divulgazione, l'alterazione o la distruzione delle informazioni personali raccolte sul nostro sito web."
+            },
+            {
+                "subtitle": "Cookie e Tecnologie Simili",
+                "text": "Utilizziamo cookie e altre tecnologie simili per raccogliere informazioni sull'interazione degli utenti con il nostro sito web al fine di migliorare la user experience e personalizzare i contenuti. Gli utenti possono gestire le impostazioni dei cookie attraverso le impostazioni del proprio browser."
+            },
+            {
+                "subtitle": "Modifiche all'Informativa sulla Privacy",
+                "text": "Ci riserviamo il diritto di modificare questa informativa sulla privacy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e l'utente è invitato a controllare regolarmente questa pagina per essere informato su eventuali cambiamenti."
+            },
+            {
+                "subtitle": "Contatti",
+                "text": "Se hai domande o preoccupazioni riguardanti questa informativa sulla privacy, ti preghiamo di contattarci all'indirizzo email info@lm-webdev.com o all'indirizzo postale via Marcello Piacentini 7, 48124 Ravenna, RA, Italia."
+            }
+        ],
+        "date": "15/07/2024"
+    },
+    "terms": {
+        "title": "Termini e Condizioni di Utilizzo del Sito Web",
+        "text": "Benvenuto su Lorenzo Marini Web Developer. Ti preghiamo di leggere attentamente questi Termini e Condizioni prima di utilizzare il nostro sito web.",
+        "sub": [
+            {
+                "subtitle": "Accettazione dei Termini e Condizioni",
+                "text": "Utilizzando questo sito web, accetti di essere vincolato da questi Termini e Condizioni. Se non sei d'accordo con qualsiasi parte di questi termini, non utilizzare il nostro sito web."
+            },
+            {
+                "subtitle": "Uso del Sito Web",
+                "text": [{
+                    "line1": "Devi avere almeno 18 anni per utilizzare questo sito web.",
+                    "line2": "Sei responsabile per tutte le attività che avvengono sotto il tuo account.",
+                    "line3": "Il nostro sito web può essere utilizzato solo per scopi leciti e non dannosi."
+                }]
+            },
+            {
+                "subtitle": "Proprietà Intellettuale",
+                "text": [{
+                    "line1": "Il contenuto del sito web, inclusi testi, grafica, loghi, icone, immagini, clip audio e video, è di proprietà di Lorenzo Marini o dei suoi licenzianti e protetto dalle leggi sul copyright.",
+                    "line2": "Non puoi riprodurre, distribuire o utilizzare il contenuto del sito web per scopi commerciali senza il consenso esplicito di Lorenzo Marini."
+                }]
+            },
+            {
+                "subtitle": "Limitazione di Responsabilità",
+                "text": [{
+                    "line1": "Lorenzo Marini Web Developer non garantisce l'accuratezza, l'affidabilità o la completezza del contenuto del sito web.",
+                    "line2": "Non siamo responsabili per eventuali danni diretti, indiretti, accidentali o conseguenti derivanti dall'uso o dall'incapacità di utilizzare il nostro sito web."
+                }]
+            },
+            {
+                "subtitle": "Modifiche ai Termini e Condizioni",
+                "text": "Ci riserviamo il diritto di modificare questi Termini e Condizioni in qualsiasi momento senza preavviso. L'uso continuato del sito web dopo tali modifiche costituirà la tua accettazione dei nuovi termini."
+            },
+            {
+                "subtitle": "Legge Applicabile",
+                "text": "Questi Termini e Condizioni sono disciplinati e interpretati in conformità con le leggi dello Stato Italiano senza tener conto dei suoi principi di conflitto di leggi.<br>Accettando questi Termini e Condizioni, confermi di essere legalmente autorizzato a vincolarti a un contratto legalmente vincolante.<br>Per ulteriori informazioni o domande sui nostri Termini e Condizioni, contattaci a info@lm-webdev.io o tramite il nostro modulo di contatto sul sito web."
+            }
+        ],
+        "date": "15/07/2024"
+    }
+}
