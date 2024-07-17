@@ -1,4 +1,6 @@
 <?php
+ini_set("auto_detect_line_endings"), true); // Fine linea MAC
+
 require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
