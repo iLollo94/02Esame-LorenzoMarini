@@ -2,15 +2,46 @@
 require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
+/**
+ * @var file con dati comuni a tutte le pagine
+ * 
+*/
 $staticDataFile = 'data/static.json';
+
+/**
+ * @var array contenente dati comuni a tutte le pagine
+ * 
+*/
 $staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
 
+/**
+ * @var file con dati pagina contatti
+ * 
+*/
 $contactsDataFile = 'data/contacts.json';
+
+/**
+ * @var array con dati pagina contatti
+ * 
+*/
 $contactsDataArray = (array)json_decode(file_get_contents($contactsDataFile));
 
+/**
+ * @var string titolo sito web
+ * 
+*/
 $title = 'Lorenzo Marini WEB DEV';
+
+/**
+ * @var array con link files(s) CSS
+ * 
+*/
 $css = array('scss/css/style.min', 'scss/css/contacts.min');
 
+/**
+ * @var string conferma invio modulo
+ * 
+*/
 $inviato = UT::richiestaHTTP('inviato');
 $inviato = ($inviato == null) ? false : true;
 
