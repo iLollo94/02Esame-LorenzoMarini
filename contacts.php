@@ -265,7 +265,7 @@ if ($inviato) {
                         }
                     }
                     // STAMPA BOTTONI
-                    $formStr .= '<div class="buttons"><input type="submit" id="submit" value="INVIA"><input type="reset" id ="reset" value="RESET"></div>';
+                    $formStr .= '<div class="buttons"><input type="submit" id="submit" value="Invia messaggio"><input type="reset" id ="reset" value="Pulisci campi"></div>';
                     // CHIUSURA FORM
                     $formStr .= '</fieldset></form>';
                     echo $formStr;
