@@ -46,6 +46,11 @@ $css = array('scss/css/style.min', 'scss/css/contacts.min');
 */
 $inviato = UT::richiestaHTTP('inviato');
 $inviato = ($inviato == null) ? false : true;
+$validate = 0; // Contatore errori
+
+// Definizione degli array da modificare durante la validazione (per assegnare valori a value="" e class="")
+$formArray = (array)$contactsDataArray['form'];
+$options = (array)$formArray['request']->options;
 
 // VALIDAZIONE FORM
 if ($inviato) {
@@ -55,42 +60,100 @@ if ($inviato) {
     $phone = UT::richiestaHTTP('phone');
     $request = UT::richiestaHTTP('request');
     $message = UT::richiestaHTTP('message');
+    $privacy = (UT::richiestaHTTP('privacy') == "on") ? true : false;
 
-    $validate = 0; // Contatore errori
+    $clsErrore = "error";
 
     // Validazione campi
-    // Validazione NOME
-    if (($firstName == "") || !UT::ctrlLunghezzaStringa($lastName, 0, 32)) {
+    if (($request != "")) {
+        $options['none']-> status = "";
+        switch ($request) {
+            case ("website"):
+                $options['website']->status = "selected";
+                break;
+            case ("webapp"):
+                $options['website']->status = "selected";
+                break;
+            case ("server"):
+                $options['website']->status = "selected";
+                break;
+            case ("maintenance"):
+                $options['website']->status = "selected";
+                break;
+            case ("consul"):
+                $options['website']->status = "selected";
+                break;
+            case ("info"):
+                $options['website']->status = "selected";
+                break;
+        }
+    } else {
         $validate++;
+        $formArray['request']->class = $clsErrore;
+        $options['none']-> status = "selected";
+    }
+
+    // Validazione NOME
+    if (($firstName != "") && UT::ctrlLunghezzaStringa($firstName, 0, 32)) {
+        $formArray['nome']->class = "";
+        $formArray['nome']->value = $firstName;
+    } else {
+        $validate++;
+        $formArray['nome']->class = $clsErrore;
         $firstName = "";
     }
 
     // Validazione COGNOME
-    if (($lastName == "") || !UT::ctrlLunghezzaStringa($lastName, 0, 32)) {
+    if (($lastName != "") && UT::ctrlLunghezzaStringa($lastName, 0, 32)) {
+        $formArray['cognome']->class = "";
+        $formArray['cognome']->value = $lastName;
+    } else {
         $validate++;
+        $formArray['cognome']->class = $clsErrore;
         $lastName = "";
     }
 
     // Validazione EMAIL
-    if (($email == "") || !UT::ctrlLunghezzaStringa($email, 6, 100) || (filter_var($email, FILTER_VALIDATE_EMAIL) == false)) {
+    if (($email != "") && UT::ctrlLunghezzaStringa($email, 6, 100) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $formArray['email']->class = "";
+        $formArray['email']->value = $email;
+    } else {
         $validate++;
+        $formArray['email']->class = $clsErrore;
         $email = "";
     }
 
     // Validazione TELEFONO
-    if (($phone == "") || !UT::ctrlLunghezzaStringa($phone, 6, 32)) {
+    if (($phone != "") && UT::ctrlLunghezzaStringa($phone, 6, 15) && preg_match('/^[0-9]+$/', $phone)) {
+        $formArray['telefono']->class = "";
+        $formArray['telefono']->value = $phone;
+    } else {
         $validate++;
+        $formArray['telefono']->class = $clsErrore;
         $phone = "";
     }
 
     // Validazione MESSAGGIO
-    if (($message == "") || !UT::ctrlLunghezzaStringa($message, 10, 300)) {
+    if (($message != "") && UT::ctrlLunghezzaStringa($message, 10, 300)) {
+        $formArray['messaggio']->class = "";
+        $formArray['messaggio']->value = $message;
+    } else {
         $validate++;
+        $formArray['messaggio']->class = $clsErrore;
         $message = "";
+    }
+
+    // Validazione CHECKBOX PRIVACY
+    if ($privacy) {
+        $formArray['privacy']->class = "";
+    } else {
+        $validate++;
+        $formArray['privacy']->class = $clsErrore;
     }
 
     $inviato = ($validate == 0) ? true : false;
 } else {
+    $request = "";
     $firstName = "";
     $lastName = "";
     $email = "";
@@ -122,7 +185,6 @@ if ($inviato) {
             <div class="box contact-box">
                 <?php
                 $recapiti = $contactsDataArray['recapiti'];
-                // print_r($recapiti);
                 $recapitiStr = '';
                 foreach ($recapiti as $group) {
                     // APRO DIV GRUPPO RECAPITI
@@ -154,42 +216,54 @@ if ($inviato) {
 
             <div class="box form">
                 <?php
-                $formArray = $contactsDataArray['form'];
-                if (!$inviato) {
+                if (!$inviato || ($inviato && $validate != 0)) {
                     // APRO FORM
                     $formStr = '<form action="?inviato=1" method="post" novalidate>';
                     // APRO FIELDSET E STAMPO LEGEND
                     $formStr .= '<fieldset><legend><h3>Compila il form qui sotto e verrai ricontattato</h3></legend>';
-                    // CICLO ARRAY DA contacts.json PER STAMPARE GLI INPUT
+
+                    /**
+                     * CICLO ARRAY DA contacts.json PER STAMPARE GLI INPUT
+                     * 
+                     * In ogni stampa di input è presente attributo class che in caso di errore prende valore "error", 
+                     * impostandogli le proprietà degli input errati (per il checkbox questo accade nella label).
+                     * In caso di campo compilato o con stato antecedente alla compilazione rimane class="".
+                     * 
+                     * Inoltre è presente attributo value che prende il valore della relativa variabile in caso di errore
+                     * nella compilazione degli altri input
+                     */
                     foreach ($formArray as $input) {
-                        // STAMPA LABEL
-                        $formStr .= sprintf('<label for="%s">%s</label>', $input->cssId, $input->label);
+                        // STAMPA LABEL (non per il checkbox)
+                        if ($input->type != "checkbox") {
+                            $formStr .= sprintf('<label for="%s" class="%s" value="%s">%s</label>', $input->cssId, $input->class, $input->value, $input->label);
+                        }
                         // STAMPA INPUT DIFFERENZIANDO TRA SELECT, TEXTAREA E TEXT/TEL
                         if ($input->type == 'select') {
                             // STAMPA SELECT
-                            $formStr .= sprintf('<select name="%s" id="%s" required>', $input->name, $input->cssId);
+                            $formStr .= sprintf('<select name="%s" class="%s" id="%s" value="%s" required>', $input->name, $input->class, $input->cssId, $input->value);
                             // CICLO ARRAY sub INTERNO A SELECT PER STAMPA OPZIONI
-                            if (isset($input->sub) && is_array($input->sub)) {
-                                foreach ($input->sub as $option) {
+                            if (isset($input->options)) {
+                                foreach ($options as $option) {
                                     if (isset($option->label)) {
-                                        $formStr .= sprintf('<option label="%s" selected disabled></option>', $option->label);
+                                        $formStr .= sprintf('<option label="%s" %s disabled></option>', $option->label, $option->status);
                                     } else {
-                                        $formStr .= sprintf('<option value="%s">%s</option>', $option->value, $option->text);
+                                        $formStr .= sprintf('<option value="%s" %s>%s</option>', $option->value, $option->status, $option->text);
                                     }
                                 }
                             }
                             $formStr .= '</select>';
                         } elseif ($input->type == 'textarea') {
                             // STAMPA TEXTAREA
-                            $formStr .= sprintf('<textarea name="%s" id="%s" placeholder="%s" minlength="%u" maxlength="%u" required></textarea>', $input->name, $input->cssId, $input->placeholder, $input->minlength, $input->maxlength);
+                            $formStr .= sprintf('<textarea name="%s" class="%s" id="%s" placeholder="%s" minlength="%u" maxlength="%u" required>%s</textarea>', $input->name, $input->class, $input->cssId, $input->placeholder, $input->minlength, $input->maxlength, $input->value);
+                        } elseif ($input->type == 'checkbox') {
+                            // STAMPA CHECKBOX PRIVACY
+                            $formStr .= sprintf('<input type="%s" name="%s" id="%s" required>', $input->type, $input->name, $input->cssId, $input->class);
+                            $formStr .= sprintf('<label for="%s" class="%s">%s</label>', $input->cssId, $input->class, $input->label);
                         } else {
                             // STAMPA INPUT TYPE TEXT/TEL
-                            $formStr .= sprintf('<input type="%s" name="%s" id="%s" placeholder="%s" minlength="%u" maxlength="%u" required>', $input->type, $input->name, $input->cssId, $input->placeholder, $input->minlength, $input->maxlength);
+                            $formStr .= sprintf('<input type="%s" name="%s" class="%s" id="%s" placeholder="%s" minlength="%u" maxlength="%u" value="%s" required>', $input->type, $input->name, $input->class, $input->cssId, $input->placeholder, $input->minlength, $input->maxlength, $input->value);
                         }
                     }
-                    // STAMPA CHECKBOX PRIVACY
-                    $formStr .= '<input type="checkbox" name="privacy" id="privacy" required>';
-                    $formStr .= '<label for="privacy">Ho letto l\'<a href="privacy.php" title="Leggi l\'informatica privacy">informativa privacy</a> e presto il mio consenso.</label>';
                     // STAMPA BOTTONI
                     $formStr .= '<div class="buttons"><input type="submit" id="submit" value="INVIA"><input type="reset" id ="reset" value="RESET"></div>';
                     // CHIUSURA FORM

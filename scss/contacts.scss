@@ -64,10 +64,15 @@ main {
                             text-align: right;
                         }
 
+                        // Label classe errore in compilazione input
+                        label.error {
+                            color: $coloreErroreForm;
+                        }
+
                         label::after {
                             content: '*';
                             margin: 0 5px;
-                            color: red;
+                            color: $coloreErroreForm;
                         }
 
                         // STILE INPUT
@@ -86,6 +91,12 @@ main {
 
                             &:hover {
                                 background-color: $coloreSecondario;
+                            }
+
+                            // Classe errore in compilazione input
+                            &.error {
+                                border: 1px solid $coloreErroreForm;
+                                border-bottom: 3px solid $coloreErroreForm;
                             }
                         }
 

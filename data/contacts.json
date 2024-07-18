@@ -51,100 +51,127 @@
             "content": "Lorenzo Marini Web Developer<br>Via Nome Cognome, 7<br>48124 Ravenna, RA<br>Italy"
         }
     ],
-    "form": [
-        {
+    "form": {
+        "request": {
             "id": 1,
             "type": "select",
             "name": "request",
             "cssId": "request",
+            "class": "",
+            "value": "",
             "placeholder": "",
             "label": "Tipo di richiesta:",
-            "sub": [
-                {
+            "options": {
+                "none": {
                     "id": 11,
-                    "label": "--Seleziona un tipo di richiesta--"
+                    "label": "--Seleziona un tipo di richiesta--",
+                    "status": "selected"
                 },
-                {
+                "website": {
                     "id": 12,
                     "value": "website",
-                    "text": "Sviluppo Sito Web"
+                    "text": "Sviluppo Sito Web",
+                    "status": ""
                 },
-                {
+                "webapp": {
                     "id": 13,
                     "value": "webapp",
-                    "text": "Sviluppo Web Application"
+                    "text": "Sviluppo Web Application",
+                    "status": ""
                 },
-                {
+                "server": {
                     "id": 14,
                     "value": "server",
-                    "text": "Sviluppo Web Server o Database"
+                    "text": "Sviluppo Web Server o Database",
+                    "status": ""
                 },
-                {
+                "maintenance": {
                     "id": 15,
                     "value": "maintenance",
-                    "text": "Risoluzione problemi o modifiche"
+                    "text": "Risoluzione problemi o modifiche",
+                    "status": ""
                 },
-                {
+                "consul": {
                     "id": 16,
                     "value": "consul",
-                    "text": "Consulenza"
+                    "text": "Consulenza",
+                    "status": ""
                 },
-                {
+                "info": {
                     "id": 17,
                     "value": "info",
-                    "text": "Informazioni"
+                    "text": "Informazioni",
+                    "status": ""
                 }
-            ]
+            }
         },
-        {
+        "nome": {
             "id": 2,
             "type": "text",
             "name": "firstName",
             "cssId": "firstName",
+            "class": "",
+            "value": "",
             "placeholder": "Nome",
             "label": "Nome",
             "minlength": 0,
             "maxlength": 32
         },
-        {
+        "cognome": {
             "id": 3,
             "type": "text",
             "name": "lastName",
             "cssId": "lastName",
+            "class": "",
+            "value": "",
             "placeholder": "Cognome",
             "label": "Cognome",
             "minlength": 0,
             "maxlength": 32
         },
-        {
+        "email": {
             "id": 4,
-            "type": "text",
+            "type": "email",
             "name": "email",
             "cssId": "email",
+            "class": "",
+            "value": "",
             "placeholder": "Indirizzo Email",
             "label": "Indirizzo Email",
             "minlength": 6,
             "maxlength": 100
         },
-        {
+        "telefono": {
             "id": 5,
             "type": "tel",
             "name": "phone",
             "cssId": "phone",
+            "class": "",
+            "value": "",
             "placeholder": "Telefono",
             "label": "Telefono",
             "minlength": 6,
             "maxlength": 32
         },
-        {
+        "messaggio": {
             "id": 6,
             "type": "textarea",
             "name": "message",
             "cssId": "message",
+            "class": "",
+            "value": "",
             "placeholder": "Descrivi brevemente per quale servizio desideri essere ricontattato",
             "label": "Messaggio",
             "minlength": 10,
             "maxlength": 300
+        },
+        "privacy": {
+            "id": 7,
+            "type": "checkbox",
+            "name": "privacy",
+            "cssId": "privacy",
+            "class": "",
+            "label": "Ho letto l'<a href=\"privacy.php\" title=\"Leggi l'informativa privacy\">informativa privacy</a> e presto il mio consenso."
         }
-    ]
+    }
 }
