@@ -209,7 +209,7 @@
                 "title": "Nome sito",
                 "description": "Sito web e server gestione ordini e pagamenti",
                 "type": "eCommerce",
-                "date": "1/1/24",
+                "date": "------",
                 "url": "project.php?id=4",
                 "mobileHideClass": "hiddencard"
             },
@@ -221,7 +221,7 @@
                 "title": "Nome sito",
                 "description": "Applicazione web e server gestione utenza e abbonati",
                 "type": "Web application",
-                "date": "1/1/24",
+                "date": "------",
                 "url": "project.php?id=5",
                 "mobileHideClass": "hiddencard"
             },
@@ -233,7 +233,7 @@
                 "title": "Nome sito",
                 "description": "Planner interattivo per la gestione del personale",
                 "type": "Web Application",
-                "date": "1/1/24",
+                "date": "------",
                 "url": "project.php?id=6",
                 "mobileHideClass": "hiddencard"
             }
@@ -325,8 +325,8 @@
                         "title": "Nome sito",
                         "description": "Sito web e server gestione ordini e pagamenti",
                         "type": "eCommerce",
-                        "date": "1/1/24",
-                        "url": ""
+                        "date": "------",
+                        "url": "project.php?id=4"
                     },
                     {
                         "id": 2,
@@ -335,8 +335,8 @@
                         "title": "Nome sito",
                         "description": "Applicazione web e server gestione utenza e abbonati",
                         "type": "Web application",
-                        "date": "1/1/24",
-                        "url": ""
+                        "date": "------",
+                        "url": "project.php?id=5"
                     },
                     {
                         "id": 3,
@@ -345,8 +345,8 @@
                         "title": "Nome sito",
                         "description": "Planner interattivo per la gestione del personale",
                         "type": "Web Application",
-                        "date": "1/1/24",
-                        "url": ""
+                        "date": "------",
+                        "url": "project.php?id=6"
                     }
                 ]
             }
@@ -409,17 +409,17 @@
                         "description": "Web environment per la gestione aziendale",
                         "type": "Multi-utility",
                         "date": "1/1/24",
-                        "url": "megacorp.php"
+                        "url": "project.php?id=1"
                     },
                     {
                         "id": 2,
-                        "name": "Nome sito",
+                        "name": "lmwdbooks",
                         "image": "https://fakeimg.pl/300x200?text=placeholder",
-                        "title": "Nome sito",
-                        "description": "Sito web pubblicitario",
-                        "type": "Pubblicitario",
-                        "date": "1/1/24",
-                        "url": ""
+                        "title": "LMWD-Books",
+                        "description": "Sito web di recensione libri",
+                        "type": "Website",
+                        "date": "W.I.P.",
+                        "url": "project.php?id=3"
                     }
                 ]
             }
