@@ -231,12 +231,12 @@ if ($inviato) {
                     foreach ($formArray as $input) {
                         // STAMPA LABEL (non per il checkbox)
                         if ($input->type != "checkbox") {
-                            $formStr .= sprintf('<label for="%s" class="%s" value="%s">%s</label>', $input->cssId, $input->class, $input->value, $input->label);
+                            $formStr .= sprintf('<label for="%s" class="%s">%s</label>', $input->cssId, $input->class, $input->label);
                         }
                         // STAMPA INPUT DIFFERENZIANDO TRA SELECT, TEXTAREA E TEXT/TEL
                         if ($input->type == 'select') {
                             // STAMPA SELECT
-                            $formStr .= sprintf('<select name="%s" class="%s" id="%s" value="%s" required>', $input->name, $input->class, $input->cssId, $input->value);
+                            $formStr .= sprintf('<select name="%s" class="%s" id="%s" required>', $input->name, $input->class, $input->cssId);
                             // CICLO ARRAY sub INTERNO A SELECT PER STAMPA OPZIONI
                             if (isset($input->options)) {
                                 foreach ($options as $option) {
@@ -261,7 +261,7 @@ if ($inviato) {
                         }
                     }
                     // STAMPA BOTTONI
-                    $formStr .= '<div class="buttons"><input type="submit" id="submit" value="Invia messaggio"><input type="reset" id ="reset" value="Pulisci campi"></div>';
+                    $formStr .= '<div class="buttons"><input type="submit" id="submit" value="Invia messaggio"></div>';
                     // CHIUSURA FORM
                     $formStr .= '</fieldset></form>';
                     echo $formStr;
