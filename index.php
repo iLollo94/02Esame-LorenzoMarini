@@ -5,28 +5,24 @@ require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
 /**
- * @var string file con dati comuni a tutte le pagine
- * 
-*/
-$staticDataFile = 'data/static.json';
+ * @var string JSON con dati sito web
+ */
+$dataFile = 'data/data.json';
 
 /**
- * @var array contenente dati comuni a tutte le pagine
- * 
-*/
-$staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
+ * @var array dati sito web
+ */
+$dataArray = (array)json_decode(file_get_contents($dataFile));
 
 /**
- * @var string file con dati homepage
- * 
-*/
-$homepageDataFile = 'data/homepage.json';
+ * @var array dati statici comuni a tutte le pagine
+ */
+$staticDataArray = (array)$dataArray['static'];
 
 /**
- * @var array contenente dati homepage
- * 
-*/
-$homepageDataArray = (array)json_decode(file_get_contents($homepageDataFile));
+ * @var array dati homepage
+ */
+$homepageDataArray = (array)$dataArray['homepage'];
 
 /**
  * @var string titolo sito web

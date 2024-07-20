@@ -150,7 +150,7 @@ class Utility {
     */
     public static function generaHeader(array $staticDataArray) {
         // Separo dati header e nav da staticDataArray
-        $headerArray = (array)$staticDataArray['header'][0];
+        $headerArray = (array)$staticDataArray['header'];
         $navArray = $staticDataArray['nav'];
 
         // Stampa logo e titolo

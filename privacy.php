@@ -5,28 +5,24 @@ require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
 /**
- * @var string file con dati comuni a tutte le pagine
- * 
-*/
-$staticDataFile = 'data/static.json';
+ * @var string JSON con dati sito web
+ */
+$dataFile = 'data/data.json';
 
 /**
- * @var array contenente dati comuni a tutte le pagine
- * 
-*/
-$staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
+ * @var array dati sito web
+ */
+$dataArray = (array)json_decode(file_get_contents($dataFile));
 
 /**
- * @var string file con dati pagine privacy e termini
- * 
-*/
-$privacyTermsDataFile = 'data/privacyTerms.json';
+ * @var array dati statici comuni a tutte le pagine
+ */
+$staticDataArray = (array)$dataArray['static'];
 
 /**
- * @var array con dati pagina privacy e termini
- * 
-*/
-$privacyTermsDataArray = (array)json_decode(file_get_contents($privacyTermsDataFile));
+ * @var array dati privacy
+ */
+$privacyDataArray = (array)$dataArray['privacy'];
 
 /**
  * @var string titolo sito web
@@ -64,14 +60,12 @@ $css = array('scss/css/style.min', 'scss/css/privacyTerms.min');
     <main>
         <div class="terms-container">
             <?php
-            $privacyArray = (array)$privacyTermsDataArray['privacy'];
-
             // Stampa testo privacy
-            $privacyStr = sprintf('<h1>%s</h1><p>%s</p>', $privacyArray['title'], $privacyArray['text']);
-            foreach ($privacyArray['sub'] as $subContent) {
+            $privacyStr = sprintf('<h1>%s</h1><p>%s</p>', $privacyDataArray['title'], $privacyDataArray['text']);
+            foreach ($privacyDataArray['sub'] as $subContent) {
                 $privacyStr .= sprintf('<h2>%s</h2><p>%s</p>', $subContent->subtitle, $subContent->text);
             }
-            $privacyStr .= sprintf('<p class="edit-date">Ultimo aggiornamento: %s</p>', $privacyArray['date']);
+            $privacyStr .= sprintf('<p class="edit-date">Ultimo aggiornamento: %s</p>', $privacyDataArray['date']);
             echo $privacyStr;
             ?>
         </div>

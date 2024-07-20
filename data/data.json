@@ -1,0 +1,762 @@
+{
+    "static": {
+        "header": {
+            "logo": "img/LOGO_CIRCLE_PICCOLO.png",
+            "title": "Lorenzo Marini",
+            "subtitle": "Web Developer"
+        },
+        "nav": [
+            {
+                "id": 1,
+                "title": "Home",
+                "name": "Home",
+                "url": "index.php"
+            },
+            {
+                "id": 2,
+                "title": "Portfolio",
+                "name": "Portfolio",
+                "url": "portfolio.php"
+            },
+            {
+                "id": 3,
+                "title": "Servizi",
+                "name": "Servizi",
+                "url": "services.php"
+            },
+            {
+                "id": 4,
+                "title": "Contatti",
+                "name": "Contatti",
+                "url": "contacts.php"
+            }
+        ],
+        "footer": {
+            "colonne": [
+                {
+                    "id": 1,
+                    "name": "colonna1",
+                    "class": "footer-col",
+                    "title": "Vieni a trovarmi:",
+                    "content": "<address><p>Via Nome Cognome 7,<br>48124 Ravenna RA,<br>Italia<\/p><\/address>"
+                },
+                {
+                    "id": 2,
+                    "name": "colonna2",
+                    "class": "footer-col",
+                    "title": "Contattami:",
+                    "content": "<address><ul><li><a href=\"mailto:info@lmwebdev.io\" title=\"mail\">info@lmwebdev.io<\/a><\/li><li><a href=\"#\" title=\"telefono\">+39 338xxxxxxx<\/a><\/li><\/ul><\/address>"
+                },
+                {
+                    "id": 3,
+                    "name": "colonna3",
+                    "class": "footer-col",
+                    "title": "Seguimi su:",
+                    "content": "<address><ul><li><a href=\"#\" title=\"Facebook\">Facebook<\/a><\/li><li><a href=\"#\" title=\"Linkedin\">Linkedin<\/a><\/li><li><a href=\"#\" title=\"Instragram\">Instragram<\/a><\/li><\/ul><\/address>"
+                }
+            ],
+            "righe": [
+                {
+                    "id": 1,
+                    "name": "privacy",
+                    "class": "footer-privacy",
+                    "content": "<ul><li><a href=\"privacy.php\" title=\"Privacy\">Privacy<\/a><\/li><li><a href=\"terms.php\" title=\"ToC\">Terms and Conditions<\/a><\/li><\/ul>"
+                },
+                {
+                    "id": 2,
+                    "name": "copyright",
+                    "class": "footer-copy",
+                    "content": "<p>Created by Lorenzo Marini. All rights reserved &copy; 2024<\/p>"
+                }
+            ]
+        }
+    },
+    "homepage": {
+        "cards": [
+            {
+                "id": 1,
+                "name": "front-end",
+                "text": "Sviluppo Front-end",
+                "image": "img/front-end.jpg"
+            },
+            {
+                "id": 2,
+                "name": "back-end",
+                "text": "Sviluppo back-end",
+                "image": "img/back-end.jpg"
+            },
+            {
+                "id": 3,
+                "name": "consulenza",
+                "text": "Consulenza",
+                "image": "img/consulenza.jpg"
+            },
+            {
+                "id": 4,
+                "name": "assemblaggio",
+                "text": "Assemblaggio sistemi",
+                "image": "img/assemblaggio.jpg"
+            }
+        ],
+        "clienti": [
+            {
+                "id": 1,
+                "name": "cliente1",
+                "image": "",
+                "title": "LOGO CLIENTE"
+            },
+            {
+                "id": 2,
+                "name": "cliente2",
+                "image": "",
+                "title": "LOGO CLIENTE"
+            },
+            {
+                "id": 3,
+                "name": "cliente3",
+                "image": "",
+                "title": "LOGO CLIENTE"
+            },
+            {
+                "id": 4,
+                "name": "cliente4",
+                "image": "",
+                "title": "LOGO CLIENTE"
+            },
+            {
+                "id": 5,
+                "name": "cliente5",
+                "image": "",
+                "title": "LOGO CLIENTE"
+            }
+        ],
+        "bio": [
+            {
+                "id": 1,
+                "title": "about me",
+                "image": "img/IO.jpg",
+                "imagealt": "Foto di Lorenzo Marini",
+                "imagetitle": "Lorenzo Marini",
+                "text": "data/bio.txt"
+            }
+        ],
+        "linguaggi": [
+            {
+                "id": 1,
+                "name": "HTML",
+                "image": "img/html.png"
+            },
+            {
+                "id": 2,
+                "name": "CSS",
+                "image": "img/css.png"
+            },
+            {
+                "id": 3,
+                "name": "SASS",
+                "image": "img/sass.png"
+            },
+            {
+                "id": 4,
+                "name": "PHP",
+                "image": "img/php.png"
+            }
+        ]
+    },
+    "portfolio": {
+        "cards": [
+            {
+                "id": 1,
+                "name": "megacorp",
+                "class": "multi",
+                "image": "img/appgestionale.jpg",
+                "title": "Megacorp SPA",
+                "description": "Web environment per la gestione aziendale",
+                "type": "Multi-utility",
+                "date": "1/1/24",
+                "url": "project.php?id=1",
+                "mobileHideClass": ""
+            },
+            {
+                "id": 2,
+                "name": "lmwebdev",
+                "class": "website",
+                "image": "img/LMWebDev.png",
+                "title": "Lorenzo Marini Web Dev",
+                "description": "Sito web portfolio personale",
+                "type": "Pubblicitario",
+                "date": "13/07/24",
+                "url": "project.php?id=2",
+                "mobileHideClass": ""
+            },
+            {
+                "id": 3,
+                "name": "lmwdbooks",
+                "class": "website",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "LMWD-Books",
+                "description": "Sito web di recensione libri",
+                "type": "Website",
+                "date": "W.I.P.",
+                "url": "project.php?id=3",
+                "mobileHideClass": ""
+            },
+            {
+                "id": 4,
+                "name": "Nome sito",
+                "class": "ecommerce",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "Nome sito",
+                "description": "Sito web e server gestione ordini e pagamenti",
+                "type": "eCommerce",
+                "date": "1/1/24",
+                "url": "project.php?id=4",
+                "mobileHideClass": "hiddencard"
+            },
+            {
+                "id": 5,
+                "name": "Nome sito",
+                "class": "application",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "Nome sito",
+                "description": "Applicazione web e server gestione utenza e abbonati",
+                "type": "Web application",
+                "date": "1/1/24",
+                "url": "project.php?id=5",
+                "mobileHideClass": "hiddencard"
+            },
+            {
+                "id": 6,
+                "name": "Nome sito",
+                "class": "application",
+                "image": "https://fakeimg.pl/300x200?text=placeholder",
+                "title": "Nome sito",
+                "description": "Planner interattivo per la gestione del personale",
+                "type": "Web Application",
+                "date": "1/1/24",
+                "url": "project.php?id=6",
+                "mobileHideClass": "hiddencard"
+            }
+        ]
+    },
+    "detailedProjects": {
+        "megacorp": {
+            "id": 1,
+            "name": "Megacorp SPA",
+            "title": "Sviluppo sistema web per la gestione aziendale",
+            "gallery": [
+                {
+                    "id": 1,
+                    "name": "image-card1",
+                    "image": "img/vetrina.jpg",
+                    "imagealt": "Website Preview",
+                    "description": "Sito vetrina aziendale"
+                },
+                {
+                    "id": 2,
+                    "name": "image-card2",
+                    "image": "img/appgestionale.jpg",
+                    "imagealt": " Web Application Preview",
+                    "description": "Web Application Gestionale"
+                },
+                {
+                    "id": 3,
+                    "name": "image-card3",
+                    "image": "img/appgestionale.jpg",
+                    "imagealt": "Web Application Preview",
+                    "description": "Web Application Gestionale pt.2"
+                },
+                {
+                    "id": 4,
+                    "name": "image-card4",
+                    "image": "img/appfinanziaria.jpg",
+                    "imagealt": "Web Application Preview",
+                    "description": "Web application per la gestione finanziaria"
+                },
+                {
+                    "id": 5,
+                    "name": "image-card5",
+                    "image": "img/appfinanziaria.jpg",
+                    "imagealt": "Web Application Preview",
+                    "description": "Web application per la gestione finanziaria pt.2"
+                },
+                {
+                    "id": 6,
+                    "name": "image-card6",
+                    "image": "img/server.jpg",
+                    "imagealt": "Server Preview",
+                    "description": "Web server"
+                }
+            ],
+            "description": {
+                "title": "Descrizione",
+                "text": "Progetto realizzato per conto di Megacorp SPA, ultimato a Milano nel Gennaio 2024, utilizzando framework Angular per lo sviluppo Front-End delle web application legate alla gestione aziendale e database MySQL per l'archiviazione dei dati dei clienti, dei dati del personale aziendale e dei dati finanziari.",
+                "url": "",
+                "sub": [
+                    {
+                        "id": 1,
+                        "subtitle": "Sito web pubblicitario",
+                        "text": "Creato come vetrina principale nella quale i clienti possono trovare tutte le informazioni sui prodotti e i servizi offerti dall'azienda. Totalmente responsive per una visualizzazione ottimale sia su dispositivi fissi che mobile. Presenta anche una sezione per le richiesti di contatto e di consulenza, oltre che la possibilità di prenotare colloqui diretti con i consulenti aziendali attraverso un'agenda aggiornata in tempo reale."
+                    },
+                    {
+                        "id": 2,
+                        "subtitle": "Web application gestionale",
+                        "text": "Applicazione basata su framework Angular, con interfaccia completamente personalizzabile lato client in base al reparto in cui si opera, che sia gestione del personale, gestione degli appuntamenti o gestione delle prenotazioni ricevute attraverso il sito web pubblico."
+                    },
+                    {
+                        "id": 3,
+                        "subtitle": "Web application per la gestione finanziaria",
+                        "text": "Strutturata secondo le necessità del reparto di amministrazione aziendale, permette la totale gestione dei magazzini, della fatturazione e dell'analisi finanziaria interna."
+                    },
+                    {
+                        "id": 4,
+                        "subtitle": "Web server e database",
+                        "text": "Corpo centrale del sistema informatico aziendale, permette la comunicazione tra i vari sistemi di gestione, nonché l'archiviazione dei dati dei clienti e dei dati interni. Presenta anche un sistema di backup cloud automatico."
+                    }
+                ]
+            },
+            "other": {
+                "title": "Altri progetti simili",
+                "sub": [
+                    {
+                        "id": 1,
+                        "name": "Nome sito",
+                        "image": "https://fakeimg.pl/300x200?text=placeholder",
+                        "title": "Nome sito",
+                        "description": "Sito web e server gestione ordini e pagamenti",
+                        "type": "eCommerce",
+                        "date": "1/1/24",
+                        "url": ""
+                    },
+                    {
+                        "id": 2,
+                        "name": "Nome sito",
+                        "image": "https://fakeimg.pl/300x200?text=placeholder",
+                        "title": "Nome sito",
+                        "description": "Applicazione web e server gestione utenza e abbonati",
+                        "type": "Web application",
+                        "date": "1/1/24",
+                        "url": ""
+                    },
+                    {
+                        "id": 3,
+                        "name": "Nome sito",
+                        "image": "https://fakeimg.pl/300x200?text=placeholder",
+                        "title": "Nome sito",
+                        "description": "Planner interattivo per la gestione del personale",
+                        "type": "Web Application",
+                        "date": "1/1/24",
+                        "url": ""
+                    }
+                ]
+            }
+        },
+        "lmwebdev": {
+            "id": 2,
+            "name": "Lorenzo Marini WEB DEV",
+            "title": "Sito web portfolio personale",
+            "gallery": [
+                {
+                    "id": 1,
+                    "name": "image-card1",
+                    "image": "img/LMWebDev.png",
+                    "imagealt": "Homepage Preview",
+                    "description": "Homepage"
+                },
+                {
+                    "id": 2,
+                    "name": "image-card2",
+                    "image": "img/LMWebDev-portfolio.png",
+                    "imagealt": "Portfolio Preview",
+                    "description": "Portfolio"
+                },
+                {
+                    "id": 3,
+                    "name": "image-card3",
+                    "image": "img/LMWebDev-megacorp.png",
+                    "imagealt": "Megacorp Previe",
+                    "description": "Progetto Megacorp"
+                },
+                {
+                    "id": 4,
+                    "name": "image-card4",
+                    "image": "img/LMWebDev-servizi.png",
+                    "imagealt": "Services Preview",
+                    "description": "Servizi"
+                },
+                {
+                    "id": 4,
+                    "name": "image-card4",
+                    "image": "img/LMWebDev-contatti.png",
+                    "imagealt": "Contacts Preview",
+                    "description": "Contatti"
+                }
+            ],
+            "description": {
+                "title": "Descrizione",
+                "text": "Progetto di portfolio personale realizzato durante il corso di Web Development tenuto presso Accademia CODE. Sito web vetrina che mostra agli utenti i progetti personali, sia completati che in corso d'opera, nonché una descrizione dei servizi offerti ai possibili clienti o aziende. Offre anche una sezione in cui è possibile prendere contatto inviando un breve messaggio tramite un form che si interfaccia con un database MySQL.",
+                "url": "index.php",
+                "sub": []
+            },
+            "other": {
+                "title": "Altri progetti simili",
+                "sub": [
+                    {
+                        "id": 1,
+                        "name": "megacorp",
+                        "image": "img/appgestionale.jpg",
+                        "title": "Megacorp SPA",
+                        "description": "Web environment per la gestione aziendale",
+                        "type": "Multi-utility",
+                        "date": "1/1/24",
+                        "url": "megacorp.php"
+                    },
+                    {
+                        "id": 2,
+                        "name": "Nome sito",
+                        "image": "https://fakeimg.pl/300x200?text=placeholder",
+                        "title": "Nome sito",
+                        "description": "Sito web pubblicitario",
+                        "type": "Pubblicitario",
+                        "date": "1/1/24",
+                        "url": ""
+                    }
+                ]
+            }
+        }
+    },
+    "services": {
+        "cards": [
+            {
+                "id": 1,
+                "name": "front-end",
+                "front": [
+                    {
+                        "text": "Sviluppo Front-end",
+                        "image": "img/front-end.jpg",
+                        "imagealt": "front-end"
+                    }
+                ],
+                "back": [
+                    {
+                        "line1": "Sviluppo siti web dinamici",
+                        "line2": "Web design",
+                        "line3": "UX/UI design",
+                        "line4": "Sviluppo web app con framework Angular",
+                        "line5": "<strong>HTML - CSS - PHP<\/strong>"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "back-end",
+                "front": [
+                    {
+                        "text": "Sviluppo Back-end",
+                        "image": "img/back-end.jpg",
+                        "imagealt": "back-end"
+                    }
+                ],
+                "back": [
+                    {
+                        "line1": "Sviluppo funzionalità lato server",
+                        "line2": "Costruzione database basati su MySQL",
+                        "line3": "Sviluppo web app con framework Angular",
+                        "line4": "<strong>PHP<\/strong>"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "name": "consulenza",
+                "front": [
+                    {
+                        "text": "Consulenza",
+                        "image": "img/consulenza.jpg",
+                        "imagealt": "consulenza"
+                    }
+                ],
+                "back": [
+                    {
+                        "line1": "Consulenza informatica",
+                        "line2": "Consulenza per lo sviliuppo di applicazioni web",
+                        "line3": "Consulenza sviluppo server"
+                    }
+                ]
+            },
+            {
+                "id": 4,
+                "name": "assemblaggio",
+                "front": [
+                    {
+                        "text": "Assemblaggio Hardware",
+                        "image": "img/assemblaggio.jpg",
+                        "imagealt": "assemblaggio"
+                    }
+                ],
+                "back": [
+                    {
+                        "line1": "Assemblaggio e manutenzione PC desktop custom per ogni range di utilizzo",
+                        "line2": "Pulizia, manutenzione e installazione software di base",
+                        "line3": "Risoluzione problemi hardware e software"
+                    }
+                ]
+            }
+        ]
+    },
+    "contacts": {
+        "recapiti": [
+            {
+                "id": 1,
+                "title": "Contatti",
+                "class": "contacts",
+                "content": [
+                    {
+                        "id": 11,
+                        "name": "Email",
+                        "text": "info@lmwebdev.io",
+                        "url": "mailto:info@lmwebdev.io"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Telefono",
+                        "text": "+39 338xxxxxxx",
+                        "url": "+39338xxxxxxx"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "title": "Social",
+                "class": "socials",
+                "content": [
+                    {
+                        "id": 11,
+                        "name": "Linkedin",
+                        "text": "Linkedin",
+                        "url": "http://linkedin.com"
+                    },
+                    {
+                        "id": 12,
+                        "name": "Instagram",
+                        "text": "Instagram",
+                        "url": "http://instagram.com"
+                    },
+                    {
+                        "id": 13,
+                        "name": "Facebook",
+                        "text": "Facebook",
+                        "url": "http://facebook.com"
+                    }
+                ]
+            },
+            {
+                "id": 3,
+                "title": "Sede",
+                "class": "address",
+                "content": "Lorenzo Marini Web Developer<br>Via Nome Cognome, 7<br>48124 Ravenna, RA<br>Italy"
+            }
+        ],
+        "form": {
+            "request": {
+                "id": 1,
+                "type": "select",
+                "name": "request",
+                "cssId": "request",
+                "class": "",
+                "value": "",
+                "placeholder": "",
+                "label": "Tipo di richiesta:",
+                "options": {
+                    "none": {
+                        "id": 11,
+                        "label": "--Seleziona un tipo di richiesta--",
+                        "status": "selected"
+                    },
+                    "website": {
+                        "id": 12,
+                        "value": "website",
+                        "text": "Sviluppo Sito Web",
+                        "status": ""
+                    },
+                    "webapp": {
+                        "id": 13,
+                        "value": "webapp",
+                        "text": "Sviluppo Web Application",
+                        "status": ""
+                    },
+                    "server": {
+                        "id": 14,
+                        "value": "server",
+                        "text": "Sviluppo Web Server o Database",
+                        "status": ""
+                    },
+                    "maintenance": {
+                        "id": 15,
+                        "value": "maintenance",
+                        "text": "Risoluzione problemi o modifiche",
+                        "status": ""
+                    },
+                    "consul": {
+                        "id": 16,
+                        "value": "consul",
+                        "text": "Consulenza",
+                        "status": ""
+                    },
+                    "info": {
+                        "id": 17,
+                        "value": "info",
+                        "text": "Informazioni",
+                        "status": ""
+                    }
+                }
+            },
+            "nome": {
+                "id": 2,
+                "type": "text",
+                "name": "firstName",
+                "cssId": "firstName",
+                "class": "",
+                "value": "",
+                "placeholder": "Nome",
+                "label": "Nome",
+                "minlength": 0,
+                "maxlength": 32
+            },
+            "cognome": {
+                "id": 3,
+                "type": "text",
+                "name": "lastName",
+                "cssId": "lastName",
+                "class": "",
+                "value": "",
+                "placeholder": "Cognome",
+                "label": "Cognome",
+                "minlength": 0,
+                "maxlength": 32
+            },
+            "email": {
+                "id": 4,
+                "type": "email",
+                "name": "email",
+                "cssId": "email",
+                "class": "",
+                "value": "",
+                "placeholder": "Indirizzo Email",
+                "label": "Indirizzo Email",
+                "minlength": 6,
+                "maxlength": 100
+            },
+            "telefono": {
+                "id": 5,
+                "type": "tel",
+                "name": "phone",
+                "cssId": "phone",
+                "class": "",
+                "value": "",
+                "placeholder": "Telefono",
+                "label": "Telefono",
+                "minlength": 6,
+                "maxlength": 32
+            },
+            "messaggio": {
+                "id": 6,
+                "type": "textarea",
+                "name": "message",
+                "cssId": "message",
+                "class": "",
+                "value": "",
+                "placeholder": "Descrivi brevemente per quale servizio desideri essere ricontattato",
+                "label": "Messaggio",
+                "minlength": 10,
+                "maxlength": 300
+            },
+            "privacy": {
+                "id": 7,
+                "type": "checkbox",
+                "name": "privacy",
+                "cssId": "privacy",
+                "class": "",
+                "label": "Ho letto l'<a href=\"privacy.php\" title=\"Leggi l'informativa privacy\">informativa privacy</a> e presto il mio consenso."
+            }
+        }
+    },
+    "privacy": {
+        "title": "Informativa sulla privacy",
+        "text": "Questa informativa sulla privacy spiega come raccogliamo, utilizziamo e proteggiamo le informazioni personali che potremmo raccogliere tramite il nostro sito web Lorenzo Marini Web Developer. Il termine \"informazioni personali\" si riferisce a dati che possono essere utilizzati per identificare un individuo, inclusi ma non limitati a nome, indirizzo email, indirizzo postale o altre informazioni di contatto.",
+        "sub": [
+            {
+                "subtitle": "Raccolta delle Informazioni",
+                "text": "Raccogliamo informazioni personali solo quando ci vengono fornite volontariamente dagli utenti del sito, ad esempio quando si iscrivono alla nostra newsletter, compilano un modulo di contatto o effettuano un acquisto. Le informazioni raccolte possono includere nome, indirizzo email, indirizzo postale e altre informazioni necessarie per fornire i nostri servizi."
+            },
+            {
+                "subtitle": "Utilizzo delle Informazioni",
+                "text": "Utilizziamo le informazioni personali raccolte per fornire i servizi richiesti dagli utenti, per migliorare la user experience sul nostro sito web e per comunicare con gli utenti tramite newsletter o altre forme di comunicazione. Non condivideremo mai le informazioni personali degli utenti con terze parti senza il loro consenso, tranne nei casi in cui sia richiesto dalla legge."
+            },
+            {
+                "subtitle": "Protezione delle Informazioni",
+                "text": "Ci impegniamo a proteggere le informazioni personali degli utenti e ad adottare misure di sicurezza adeguate per prevenire l'accesso non autorizzato, la divulgazione, l'alterazione o la distruzione delle informazioni personali raccolte sul nostro sito web."
+            },
+            {
+                "subtitle": "Cookie e Tecnologie Simili",
+                "text": "Utilizziamo cookie e altre tecnologie simili per raccogliere informazioni sull'interazione degli utenti con il nostro sito web al fine di migliorare la user experience e personalizzare i contenuti. Gli utenti possono gestire le impostazioni dei cookie attraverso le impostazioni del proprio browser."
+            },
+            {
+                "subtitle": "Modifiche all'Informativa sulla Privacy",
+                "text": "Ci riserviamo il diritto di modificare questa informativa sulla privacy in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina e l'utente è invitato a controllare regolarmente questa pagina per essere informato su eventuali cambiamenti."
+            },
+            {
+                "subtitle": "Contatti",
+                "text": "Se hai domande o preoccupazioni riguardanti questa informativa sulla privacy, ti preghiamo di contattarci all'indirizzo email info@lm-webdev.com o all'indirizzo postale via Marcello Piacentini 7, 48124 Ravenna, RA, Italia."
+            }
+        ],
+        "date": "15/07/2024"
+    },
+    "terms": {
+        "title": "Termini e Condizioni di Utilizzo del Sito Web",
+        "text": "Benvenuto su Lorenzo Marini Web Developer. Ti preghiamo di leggere attentamente questi Termini e Condizioni prima di utilizzare il nostro sito web.",
+        "sub": [
+            {
+                "subtitle": "Accettazione dei Termini e Condizioni",
+                "text": "Utilizzando questo sito web, accetti di essere vincolato da questi Termini e Condizioni. Se non sei d'accordo con qualsiasi parte di questi termini, non utilizzare il nostro sito web."
+            },
+            {
+                "subtitle": "Uso del Sito Web",
+                "text": [
+                    {
+                        "line1": "Devi avere almeno 18 anni per utilizzare questo sito web.",
+                        "line2": "Sei responsabile per tutte le attività che avvengono sotto il tuo account.",
+                        "line3": "Il nostro sito web può essere utilizzato solo per scopi leciti e non dannosi."
+                    }
+                ]
+            },
+            {
+                "subtitle": "Proprietà Intellettuale",
+                "text": [
+                    {
+                        "line1": "Il contenuto del sito web, inclusi testi, grafica, loghi, icone, immagini, clip audio e video, è di proprietà di Lorenzo Marini o dei suoi licenzianti e protetto dalle leggi sul copyright.",
+                        "line2": "Non puoi riprodurre, distribuire o utilizzare il contenuto del sito web per scopi commerciali senza il consenso esplicito di Lorenzo Marini."
+                    }
+                ]
+            },
+            {
+                "subtitle": "Limitazione di Responsabilità",
+                "text": [
+                    {
+                        "line1": "Lorenzo Marini Web Developer non garantisce l'accuratezza, l'affidabilità o la completezza del contenuto del sito web.",
+                        "line2": "Non siamo responsabili per eventuali danni diretti, indiretti, accidentali o conseguenti derivanti dall'uso o dall'incapacità di utilizzare il nostro sito web."
+                    }
+                ]
+            },
+            {
+                "subtitle": "Modifiche ai Termini e Condizioni",
+                "text": "Ci riserviamo il diritto di modificare questi Termini e Condizioni in qualsiasi momento senza preavviso. L'uso continuato del sito web dopo tali modifiche costituirà la tua accettazione dei nuovi termini."
+            },
+            {
+                "subtitle": "Legge Applicabile",
+                "text": "Questi Termini e Condizioni sono disciplinati e interpretati in conformità con le leggi dello Stato Italiano senza tener conto dei suoi principi di conflitto di leggi.<br>Accettando questi Termini e Condizioni, confermi di essere legalmente autorizzato a vincolarti a un contratto legalmente vincolante.<br>Per ulteriori informazioni o domande sui nostri Termini e Condizioni, contattaci a info@lm-webdev.io o tramite il nostro modulo di contatto sul sito web."
+            }
+        ],
+        "date": "15/07/2024"
+    }
+}

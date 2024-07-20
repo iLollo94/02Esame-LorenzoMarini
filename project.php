@@ -1,32 +1,28 @@
 <?php
-ini_set("auto_detect_line_endings", true); // Fine linea MAC
+ini_set('auto_detect_line_endings', true); // Fine linea MAC
 
 require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
 /**
- * @var string file con dati comuni a tutte le pagine
- * 
-*/
-$staticDataFile = 'data/static.json';
+ * @var string JSON con dati sito web
+ */
+$dataFile = 'data/data.json';
 
 /**
- * @var array contenente dati comuni a tutte le pagine
- * 
-*/
-$staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
+ * @var array dati sito web
+ */
+$dataArray = (array)json_decode(file_get_contents($dataFile));
 
 /**
- * @var string file con dati pagina progetto Megacorp
- * 
-*/
-$megacorpDataFile = 'data/megacorp.json';
+ * @var array dati statici comuni a tutte le pagine
+ */
+$staticDataArray = (array)$dataArray['static'];
 
 /**
- * @var array con dati pagina progetto Megacorp
- * 
-*/
-$megacorpDataArray = (array)json_decode(file_get_contents($megacorpDataFile));
+ * @var array dati di dettagli dei progetti
+ */
+$detailedProjectsDataArray = (array)$dataArray['detailedProjects'];
 
 /**
  * @var string titolo sito web
@@ -39,6 +35,20 @@ $title = 'Lorenzo Marini WEB DEV';
  * 
 */
 $css = array('scss/css/style.min', 'scss/css/project.min');
+
+// In caso di mancanza di query-string all'interno dell'URL, riporta alla pagina portfolio.php
+if (isset($_GET) && $_GET['id'] != null) {
+    $idProgetto = UT::richiestaHTTP('id');
+
+    // In caso di idProgetto non presente in detailedProjects (PLACEHOLDER), riporta alla pagina portfolio.php
+    if ($idProgetto > count($detailedProjectsDataArray)) {
+        header("refresh:0;url=portfolio.php");
+        die;
+    }
+} else {
+    header("refresh:0;url=portfolio.php");
+    die;
+}
 ?>
 
 <!DOCTYPE html>
@@ -62,15 +72,25 @@ $css = array('scss/css/style.min', 'scss/css/project.min');
     </header>
 
     <main>
+        <?php
+        // Ciclo array progetti per trovare il progetto richiesto dalla query-string
+        foreach ($detailedProjectsDataArray as $project) {
+            if ($project->id == $idProgetto) {
+                $projectArray = (array)$project;
+                break;
+            }
+        }
+        ?>
         <div class="work-container">
             <div class="title-bar">
-                <h1><?php echo $megacorpDataArray['title']; ?></h1>
+                <h1><?php echo $projectArray['name']; ?></h1>
+                <h3><?php echo $projectArray['title'] ?></h3>
                 <a href="portfolio.php" title="Portfolio">Torna al Portfolio</a>
             </div>
 
-            <!-- STAMPA GALLERIA ANTEPRIMA da megacorp.json -->
+            <!-- STAMPA GALLERIA ANTEPRIMA da data.json -> detailedProjects -->
             <?php
-            $galleryArray = $megacorpDataArray['gallery'];
+            $galleryArray = $projectArray['gallery'];
             // APERTURA DIV PROJECT-PREVIEW (Carosello immagini)
             $galleryStr = '<div class="project-preview">';
             foreach ($galleryArray as $card) {
@@ -88,9 +108,9 @@ $css = array('scss/css/style.min', 'scss/css/project.min');
             echo $galleryStr;
             ?>
 
-            <!-- STAMPA DESCRIZIONE PROGETTO da megacorp.json -->
+            <!-- STAMPA DESCRIZIONE PROGETTO da data.json -> detailedProjects -->
             <?php
-            $descArray = (array)$megacorpDataArray['description'];
+            $descArray = (array)$projectArray['description'];
             // APERTURA DIV PROJECT-DESC
             $descStr = '<div class="project-desc">';
             // STAMPA TITOLO E DESCRIZIONE GENERALE
@@ -108,7 +128,9 @@ $css = array('scss/css/style.min', 'scss/css/project.min');
             <!-- STAMPA LINK AL SITO (se disponibile in json) -->
             <?php
             if ($descArray['url'] != "") {
-                $linkStr = sprintf('<a href="%s" id="project-link" title="%s">Visita il sito</a>', $descArray['url'], $megacorpDataArray['name']);
+                $linkStr = '<div class="link-row">';
+                $linkStr .= sprintf('<a href="%s" id="project-link" title="%s">Visita il sito</a>', $descArray['url'], $projectArray['name']);
+                $linkStr .= '</div>';
                 echo $linkStr;
             }
             ?>
@@ -116,11 +138,11 @@ $css = array('scss/css/style.min', 'scss/css/project.min');
 
         <div class="other">
             <!-- STAMPA TITOLO -->
-            <h1><?php echo $megacorpDataArray['other']->title; ?></h1>
+            <h1><?php echo $projectArray['other']->title; ?></h1>
             <div class="flex-other">
                 <?php
-                // STAMPA CARD PER ALTRI PROGETTI SIMILI da megacorp.json
-                $otherArray = (array)$megacorpDataArray['other']->sub;
+                // STAMPA CARD PER ALTRI PROGETTI SIMILI da data.json -> detailedProjects
+                $otherArray = (array)$projectArray['other']->sub;
                 $otherStr = '';
                 foreach ($otherArray as $card) {
                     // APERTURA DIV CARD

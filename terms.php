@@ -5,28 +5,24 @@ require_once 'data/CLASSE_Utility.php';
 use LMWebDev\Utility as UT;
 
 /**
- * @var string file con dati comuni a tutte le pagine
- * 
-*/
-$staticDataFile = 'data/static.json';
+ * @var string JSON con dati sito web
+ */
+$dataFile = 'data/data.json';
 
 /**
- * @var array contenente dati comuni a tutte le pagine
- * 
-*/
-$staticDataArray = (array)json_decode(file_get_contents($staticDataFile));
+ * @var array dati sito web
+ */
+$dataArray = (array)json_decode(file_get_contents($dataFile));
 
 /**
- * @var string file con dati pagine privacy e termini
- * 
-*/
-$privacyTermsDataFile = 'data/privacyTerms.json';
+ * @var array dati statici comuni a tutte le pagine
+ */
+$staticDataArray = (array)$dataArray['static'];
 
 /**
- * @var array con dati pagina privacy e termini
- * 
-*/
-$privacyTermsDataArray = (array)json_decode(file_get_contents($privacyTermsDataFile));
+ * @var array dati termini e condizioni
+ */
+$termsDataArray = (array)$dataArray['terms'];
 
 /**
  * @var string titolo sito web
@@ -64,12 +60,9 @@ $css = array('scss/css/style.min', 'scss/css/privacyTerms.min');
     <main>
         <div class="terms-container">
             <?php
-            $termsArray = (array)$privacyTermsDataArray['terms'];
-            // print_r($termsArray);
-
             // Stampa testo Termini e Condizioni
-            $termsStr = sprintf('<h1>%s</h1><p>%s</p>', $termsArray['title'], $termsArray['text']);
-            foreach ($termsArray['sub'] as $subContent) {
+            $termsStr = sprintf('<h1>%s</h1><p>%s</p>', $termsDataArray['title'], $termsDataArray['text']);
+            foreach ($termsDataArray['sub'] as $subContent) {
                 $termsStr .= sprintf('<h2>%s</h2>', $subContent->subtitle);
                 // Differenzio 'text' tra array e stringa, stampando arrai come liste ordinate e stringhe come paragrafi
                 if (is_array($subContent->text)) {
@@ -83,7 +76,7 @@ $css = array('scss/css/style.min', 'scss/css/privacyTerms.min');
                     $termsStr .= sprintf('<p>%s</p>', $subContent->text);
                 }
             }
-            $termsStr .= sprintf('<p class="edit-date">Ultimo aggiornamento: %s</p>', $termsArray['date']);
+            $termsStr .= sprintf('<p class="edit-date">Ultimo aggiornamento: %s</p>', $termsDataArray['date']);
             echo $termsStr;
             ?>
         </div>
